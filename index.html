@@ -1,0 +1,61 @@
+<!-- // --| 🐌	@ Unknowkubbrohter DEV 
+// -- | github : https://github.com/Unknowkubbrother	
+// -- | วันที่สร้าง 2024-03-11
+// @copyRight 2024 by Unknowkubbrother DEV (ณัฐชานน ทรัพย์มีชัย) -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <title>HCI-MINIPROJECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="app">
+    <nav>
+      <div class="flex justify-between flex-wrap gap-5 items-center p-5 bg-[#041C2D] text-white rounded-b-lg">
+        <div class="flex justify-center items-center flex-wrap gap-3">
+          <img src="images/logo.png" alt="logo" class="w-20 h-20" />
+          <h1 class="text-2xl font-semibold">{{DataInhtml.title}}</h1>
+        </div>
+        <h1 class="text-xl">{{DataInhtml.Name}} {{DataInhtml.StudentID}}</h1>
+      </div>
+    </nav>
+    <div class="con" class="font-semibold">
+      <div class="flex flex-wrap gap-5 justify-center items-center">
+    <div>
+      <label for="years">Years : </label>
+      <select v-model="selectedYear" class="text-sky-500">
+      <option v-for="year in data.years">{{year}}</option>
+        </select>
+    </div>
+    <button @click="loopYear = !loopYear" class="p-3 bg-sky-500 rounded-lg text-white hover:opacity-70 transition duration-300 ease-in-ou">{{(loopYear)? 'Stop' : 'Play'}}</button>
+    <button @click="ResetValues" class="p-3 bg-sky-500 rounded-lg text-white hover:opacity-70 transition duration-300 ease-in-out">Reset</button>
+      </div>
+      <div class="row">
+        <div id="chart-area"></div>
+      </div>
+      <div class="text-detail flex justify-center items-center mt-[-3rem]">
+       <p class="text-lg w-[80%]" ><span v-html="DataInhtml.text_detail"></span></p>
+      </div>
+    </div>
+
+    <footer class="bg-[#041C2D] text-white p-4 text-center rounded-t-lg">
+      <p class="font-semibold">&copy; {{credit}}</p>
+    </footer>
+
+
+    <!-- import vuejs -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- import d3js -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- Load color scale -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <!-- Custom JS -->
+    <script src="javascript/main.js"></script>
+  </body>
+</html>

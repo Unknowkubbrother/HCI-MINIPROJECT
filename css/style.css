@@ -1,0 +1,28 @@
+/* // --| 🐌	@ Unknowkubbrohter DEV 
+// -- | github : https://github.com/Unknowkubbrother	
+// -- | วันที่สร้าง 2024-03-11
+// @copyRight 2024 by Unknowkubbrother DEV (ณัฐชานน ทรัพย์มีชัย) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.row{
+  position: relative;
+}
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
